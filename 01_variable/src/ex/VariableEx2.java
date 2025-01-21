@@ -2,7 +2,7 @@ package ex;
 
 public class VariableEx2 {
 	// main mathod : 자바 실행 구문
-	public static void main(String[] agrs) {
+	public static void main(String[] args) {
 		/* ---- 컴퓨터 값 처리 원칙 ----
 		 * - 같은 자료형 기리만 연산이 가능하고 연산결과도 같은 자료형만 반환된다.
 		 * 
