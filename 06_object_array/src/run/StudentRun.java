@@ -11,6 +11,7 @@ public class StudentRun {
 
 		// 객체를 1회용으로 사용하는 방법
 		new StudentView().mainMenu();
+		
 		// 새로운 StudentView 객체가 생성되자마자 mainMenu() 메서드를 호출
 		// -> mainMemu()가 종료되면 new StudentView()로 만들어진 객체가 사라짐
 		// (참조하는 변수가 없어서 GC가 없애버림)
