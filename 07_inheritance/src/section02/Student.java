@@ -36,9 +36,44 @@ public class Student extends Person{
 		this.schoolName = schoolName;
 	}
 	
+	/* super 참조 변수(부모 참조 변수)
+	 * - 자식 내 부모 객체를 참조하는 변수
+	 * - 부모의 필드/메서드에 접근하기 위해 사용
+	 */
+	
+	@Override
 	public String toString() {
-		return String.format("이름 : %s / 나이 : %d / schoolName : %s"
-													, getName(), getAge(), schoolName);
+		// super.toString() : 부모의 toString() 메서드 호출
+		// -> name : 홍길동 / age : 20
+		return super.toString() + " / schoolName : " + schoolName;
+	}
+	
+//	public String toString() {
+//		return String.format("name : %s / age : %d / schoolName : %s"
+//													, getName(), getAge(), schoolName);
+//	}
+	
+	// Persion.introduce() 메서드 오버라이딩(재정의)
+	
+	/* 오버라이드 성립 조건
+	 * [변경 불가]
+	 * - 반환형
+	 * - 메서드명
+	 * - 매개변수(개수, 순서, 타입)
+	 * 
+	 * [변경 가능]
+	 * - 접근 제어자(기존 -> 넓은 범위)
+	 * - 예외 처리(기존 -> 좁은 범위)
+	 * - 
+	 */
+	
+	// Person.introduce() 메서드 오버라이딩(재정의)
+	
+	// * Person.introduce()를 final 메서드로 변경한 경우
+	
+	@Override // 오버라이딩 명시 + 성립 조건 맞는지 검사 지시
+	public String introduce(String alias) {
+		return String.format("[Student가 재정의] 내이름은 %s, %s이죠", super.getName(), alias);
 	}
 	
 }
