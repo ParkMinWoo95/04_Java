@@ -13,6 +13,6 @@ public class PolymorphismRun {
 		
 		// service.test3();
 		
-		service.test4();
+		// service.test4();
 	}
 }
