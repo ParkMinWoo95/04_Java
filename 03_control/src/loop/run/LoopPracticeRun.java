@@ -9,8 +9,11 @@ public class LoopPracticeRun {
 		// LoopPractice 객체 생성
 		LoopPractice lp = new LoopPractice();
 		
-		lp.practice16();
 //		lp.practice2();
+//		lp.practice11();
+//		lp.practice12();
+//		lp.practice15();
+		lp.practice16();
 		
 		
 		

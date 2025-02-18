@@ -1,12 +1,13 @@
 package set.run;
 
-import set.service.Setservice;
+import set.service.SetService;
 
 public class SetRun {
 	public static void main(String[] args) {
 		
-		Setservice service = new Setservice();
+		SetService service = new SetService();
 		
-		service.test4();
+//		service.test4();
+		service.lottoNumberGenrator();
 	}
 }

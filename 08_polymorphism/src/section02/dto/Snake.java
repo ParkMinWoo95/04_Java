@@ -2,6 +2,7 @@ package section02.dto;
 
 public class Snake extends Animal{
 
+	// 생성자
 	public Snake(String type) {
 		super(type);
 	}
@@ -20,6 +21,5 @@ public class Snake extends Animal{
 	public void sleep() {
 		System.out.println("뱀 : 똬리틀고 잠");
 	}
-	
 
 }

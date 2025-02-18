@@ -12,24 +12,27 @@ public class OperatorTest {
 		 */
 		
 		// Unary : 단일 요소로 된(어네어리)
-		// UnaryOperator<T> : T를 전달 받아 T를 반환
+		/* UnaryOperator<T> : T를 전달 받아 T를 반환 */
 		UnaryOperator<String> addString
 			= str -> "[" + str + "] 님 반갑습니다";
 			
 		System.out.println(addString.apply("맹구"));
 		
+		
 		// IntBinaryOperator : int 매개 변수 2개를 전달 받아 int 반환
 		IntBinaryOperator squre = (a, x) -> {
 			int result = 1;
 			
-			for(int i=0; i<x; i++) {
+			// a를 x번 거듭 제곱
+			for(int i = 0 ; i < x ; i++) {
 				result *= a;
 			}
-			
 			return result;
 		};
 		
-		System.out.printf("2^10 == " , squre.applyAsInt(2, 10));
-		System.out.printf("2^16 == " , squre.applyAsInt(2, 16));
+		System.out.println("2^10 == " + squre.applyAsInt(2, 10)); // 1024
+		System.out.println("2^16 == " + squre.applyAsInt(2, 16)); // 65536
+		
+		
 	}
 }

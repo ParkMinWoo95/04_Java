@@ -3,17 +3,17 @@ package set.dto;
 import java.util.Objects;
 
 public class Person {
-	
-	// 필드 == 멤버 변수
-	private String name;	// 인스턴스 변수
+
+	// [필드 == 멤버 변수]
+	private String name; // 인스턴스 변수
 	private int age;
 	private char gender;
-	// public static int nationalCode;	// 클래스 변수
+	// public static int natinalCode; // 클래스 변수
 	
-	// 생성자
-	public Person() {}	// 기본생성자
+	// [생성자]
+	public Person() {} // 기본 생성자
 	
-	// 매개 변수가 있는 생성자(오버로딩)
+	// 매개 변수가 있는 생성자
 	public Person(String name, int age, char gender) {
 		super();
 		this.name = name;
@@ -50,13 +50,13 @@ public class Person {
 		return "Person [name=" + name + ", age=" + age + ", gender=" + gender + "]";
 	}
 	
+	
 	// equals(), hashCode() 오버라이딩 예정
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(age, gender, name);
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -68,11 +68,8 @@ public class Person {
 		Person other = (Person) obj;
 		return age == other.age && gender == other.gender && Objects.equals(name, other.name);
 	}
-	
-	
-	
-	
-	
+
+
 	
 	
 	
